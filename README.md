@@ -25,6 +25,19 @@ See requirements.txt for the app:
 
 Training notebooks may require additional libraries (matplotlib, seaborn, soundfile, tqdm, scikit-learn). Install as needed in the notebook environment.
 
+
+### 🧩 Dataset
+1. AMI Meeting Corpus
+  - The AMI Corpus provides multiple microphone configurations per meeting:
+    - IHM (Individual Headset Microphones): close-talking microphones worn by participants (clean, separated speech).
+    - SDM/MDM (Single/Multiple Distant Microphones): room/table array microphones (more noise, real-life acoustics).
+    - For this project, both the IHM stream (for “clean” or speaker-specific audio) and the SDM/Array stream (for “realistic room” or contextual audio) were extracted from        the same AMI download.
+    - Download link: https://www.openslr.org/16/
+3. MiniLibriMix
+  - Description: Small version of the LibriMix dataset intended for speech-in-noise and source separation tasks; used here for noise/data augmentation.
+  - Download link: https://zenodo.org/records/3871592
+
+
 ### ✨ Features
 - 5-class audio scene classification with a lightweight CNN.
 - Robust Mel Spectrogram feature extraction with librosa.
